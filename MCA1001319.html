@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 1 Front End Design</title>
+    <style>
+
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700|Lato:400,700);
+#container{
+max-width: 1024px;
+margin: 0 auto;
+}
+
+@media screen and (min-width: 491px) {
+ 
+header{
+width: 90%;
+}
+  
+.left{ 
+float: left;
+width: 48%
+}
+
+.right{ 
+width: 50%;
+margin-top: 6.5em;
+float: right;
+  }
+  footer{
+width: 90%;
+}
+}
+
+@media screen and (max-width: 491px) {
+header{
+width: 90%;
+}
+
+#content{
+width: 90%;
+}
+footer{
+width: 90%;
+}
+}
+
+
+body{
+        background:url(https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=1050&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925) no-repeat center;
+  background-size: cover;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+    }
+    &:before {
+        top: 5%;
+        right: 5%;
+        bottom: 5%;
+        left: 5%;
+        z-index: -1;
+        background-size: cover;
+        background-position: top center;
+        filter: blur(5px);
+        overflow: hidden;
+    }
+    &:after {
+        top: 5%;
+        right: 5%;
+        bottom: 5%;
+        left: 5%;
+        border: 1px solid #fefefe;
+        background: rgba(0,0,0, 0.6);
+        mix-blend-mode: overlay;
+        z-index: -1;
+    }       
+
+font-size: 100%;
+}
+
+h1 a{
+font-family: Oregano, "Bookman Old Style", serif;
+text-decoration: none;
+color: #000000;
+font-size: 2.375em; /* 38px/16px */
+font-weight: normal;
+}
+
+h1 img{
+border: none;
+margin: auto;
+}
+
+
+.selected{
+color: #F2D7BE;
+} 
+/* end navigation styling */
+
+#content{
+background-color: #F2D7BE;
+padding: 1% 2.5%; /*10px and 20px*/
+overflow:hidden;
+}
+
+h2{
+padding-left:2.5%;
+font-family: Oregano, "Bookman Old Style", serif;
+font-size: 2.375em;
+color: #00577F;
+}
+
+h3{
+margin-top:-10px;
+margin-bottom: -10px;
+padding-left:20px;
+padding-top:20px;
+padding-bottom:0px;
+font-family: Oregano, "Bookman Old Style", serif;
+font-size: 1.5625em;  /* 25px/16px */
+color: #00577F;
+}
+
+p{
+font-family: "Bookman Old Style", serif;
+font-size: 1.125em; /* 18px/16px */
+}
+
+p a {
+font-weight:bold;
+}
+
+img{
+border: 0.32em solid #00577F;
+}
+
+img#me{
+height: 12em; /*200px*/
+float: right;
+margin: 1% 0.5% 2% 2%;
+}
+
+p.sample{
+font-family: "Bookman Old Style", serif;
+font-size: 1em;
+overflow:auto;
+	}
+
+img.thumb{
+width: 6em;
+float: left; 
+margin: 2%; 
+}
+
+.neon {
+    position: relative;
+    overflow: hidden;
+    filter: brightness(200%);
+}
+
+.text {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    user-select: none;
+}
+
+.text::before {
+    content: attr(data-text);
+    position: absolute;
+    color: white;
+    filter: blur(0.02em);
+    mix-blend-mode: difference;
+}
+
+.gradient {
+    position: absolute;
+    background: linear-gradient(45deg, red, gold, lightgreen, gold, red);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    mix-blend-mode: multiply;
+}
+
+.spotlight {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(
+            circle,
+            white,
+            transparent 25%
+        ) center / 25% 25%,
+        radial-gradient(
+            circle,
+            white,
+            black 25%
+        ) center / 12.5% 12.5%;
+    animation: light 5s linear infinite;
+    mix-blend-mode: color-dodge;
+}
+
+@keyframes light {
+    to {
+        transform: translate(50%, 50%);
+    }
+}
+        
+
+    </style>
+</head>
+<body>
+      
+    <div id="container">
+
+        <header>
+          <h1><a href="../index.html">Elon Musk</a></h1>
+        </header>
+        
+        <div id="content">
+        <section>
+             <img id="me" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Elon_Musk_Royal_Society_%28crop1%29.jpg/320px-Elon_Musk_Royal_Society_%28crop1%29.jpg" alt="A headshot photo of Elon Musk." />
+                  <p>Musk was born June 28, 1971, in Pretoria, Tranvsvaal, South Africa to his mother, a model from Regina, Canada, and his father Errol Musk, a South African-born mechanical engineer.  After his parents divorced in 1980, Musk lived mostly with his father in locations in South Africa.  At age 10, he discovered computing with the Commodore VIC-20.  He taught himself computer programming and at age 12 sold the code for a BASIC-based video game he created called 'Blastar' for approximately $500 USD.  After graduating from high school in Pretoria, he moved to Canada in June 1989 after obtaining Canadian citizenship through his Canadian-born mother. </p>
+                  <p>In 2002, Musk founded SpaceX, an aerospace manufacturer and space transport services company, of which he is CEO, CTO, and lead designer. In 2004, he joined electric vehicle manufacturer Tesla Motors, Inc. (now Tesla, Inc.) as chairman and product architect, becoming its CEO in 2008. In 2006, he helped create SolarCity, a solar energy services company and current Tesla subsidiary. In 2015, he co-founded OpenAI, a nonprofit research company that promotes friendly artificial intelligence. In 2016, he co-founded Neuralink, a neurotechnology company focused on developing brain–computer interfaces, and founded The Boring Company, a tunnel construction company. Musk has proposed the Hyperloop, a high-speed vactrain transportation system.</p>
+          <h3>His Education</h3>
+                  <p>Aware it would be easier to enter the United States from Canada,[24] Musk applied for a Canadian passport through his Canadian-born mother.[25][26] While awaiting the documentation, he attended the University of Pretoria for five months; this allowed Musk to avoid mandatory service in the South African military.[27] Arriving in Canada in June 1989, Musk failed to locate his great-uncle in Montreal and instead stayed at a youth hostel. He then traveled west to live with a second-cousin in Saskatchewan.[28] He stayed there for a year, working odd jobs at a farm and lumber-mill.[29] In 1990, Musk entered Queen's University in Kingston, Ontario.[30][31] Two years later, he transferred to the University of Pennsylvania; he graduated in 1997 with a Bachelor of Science (BS) degree in economics from the Wharton School and a Bachelor of Arts (BA) degree in physics.</p>
+          <h3>Business career</h3>
+                  <p>In 1995, Musk, Kimbal, and Greg Kouri founded web software company Zip2 with funds from angel investors.[16] They housed the venture at a small rented office in Palo Alto.[38] The company developed and marketed an Internet city guide for the newspaper publishing industry, with maps, directions, and yellow pages.[39] Musk says that before the company became successful, he could not afford an apartment and instead slept on the office couch and showered at the YMCA. They could only afford one computer, and, according to Musk, "The website was up during the day and I was coding it at night, seven days a week, all the time."[38] Musk brothers obtained contracts with The New York Times and the Chicago Tribune,[40] and persuaded the board of directors to abandon plans for a merger with CitySearch.[41] Musk's attempts to become CEO, a position held by its Chairman Rich Sorkin,[42] were thwarted by the board.[43] Compaq acquired Zip2 for $307 million in cash in February 1999.[44][45] Musk received $22 million for his 7 percent share.</p>
+          <h3>X.com and PayPal</h3>
+                  <p>In 1999, Musk co-founded X.com, an online financial services and e-mail payment company.[48] The startup was one of the first online banks to be federally insured, and, within its initial months, over 200,000 customers joined the service.[49] The company's investors saw Musk as inexperienced and had him replaced with Intuit CEO Bill Harris by the end of the year.[50] The following year, X.com merged with online bank Confinity to prevent unnecessary competition.[38][50][51] Founded by Max Levchin and Peter Thiel,[52] Confinity had its own money-transfer service, PayPal, which was more popular than X.com's service.[46][53] Within the merged company, Musk returned as CEO. Musk's preference for Microsoft software over Linux created a rift in the company and caused Thiel to resign.</p>
+          <h3>SpaceX</h3>
+                  <p>In 2001, Musk became involved with the nonprofit Mars Society. He was inspired by plans to place a growth-chamber for plants on Mars and discussed funding the project himself.[63] In October 2001, Musk traveled to Moscow to buy refurbished Intercontinental ballistic missiles (ICBMs) that could send the greenhouse payloads into space. He met with companies NPO Lavochkin and Kosmotras; however, Musk was seen as a novice and was even spat on by one of the Russian chief designers. The group returned to the United States empty-handed. In February 2002, the group returned to Russia to look for three ICBMs. They had another meeting with Kosmotras and were offered one rocket for $8 million, which Musk rejected. Musk instead decided to start a company that could build affordable rockets.[64] With $100 million of his early fortune,[65] Musk founded Space Exploration Technologies Corp., traded as SpaceX, in May 2002.</p>
+          <h3>Tesla</h3>
+                  <p>Tesla, Inc.—originally Tesla Motors—was incorporated in July 2003 by Martin Eberhard and Marc Tarpenning, who financed the company until the Series A round of funding.[82] Both men played active roles in the company's early development prior to Musk's involvement.[83] Musk led the Series A round of investment in 2004, joining Tesla's board of directors as chairman.[84][85] Musk took an active role within the company and oversaw Roadster product design but was not deeply involved in day-to-day business operations.[86] Following a series of escalating conflicts in 2007 and the 2008 financial crisis, Eberhard was ousted from the firm.[87][88] Musk assumed leadership of the company as CEO and product architect in 2008.[89] A 2009 lawsuit settlement with Eberhard designated Musk as a Tesla co-founder, along with Tarpenning and two others.[4][5] As of 2019, Musk is the longest tenured CEO of any automotive manufacturer globally.</p>
+            </section>  
+              </div>
+              <footer>
+                <div class="neon">
+                        <span class="text" >*****  Assignment 1 Dated : 25 March 2021  ********    |   *******  Submitted by Mayank Hanwat (MCA/10013/19).  *****</span>
+                        <span class="gradient"></span>
+                        <span class="spotlight"></span>
+                      </div>
+               </footer>
+          </div>
+</body>
+</html>
